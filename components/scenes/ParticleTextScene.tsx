@@ -11,6 +11,10 @@ function TextParticles() {
   const points = useRef<THREE.Points>(null);
 
   const { positions, targets, colors } = useMemo(() => {
+    if (typeof document === "undefined") {
+      const empty = new Float32Array(0);
+      return { positions: empty, targets: empty, colors: empty };
+    }
     const W = 512;
     const H = 96;
     const c = document.createElement("canvas");

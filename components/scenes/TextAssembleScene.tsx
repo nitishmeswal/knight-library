@@ -18,7 +18,9 @@ function Word({ text = "CREATE" }: { text?: string }) {
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
   const { targets, scatter, count } = useMemo(() => {
-    // Rasterize text to a canvas, then sample
+    if (typeof document === "undefined") {
+      return { targets: [], scatter: [], count: 0 };
+    }
     const W = 512;
     const H = 96;
     const c = document.createElement("canvas");
