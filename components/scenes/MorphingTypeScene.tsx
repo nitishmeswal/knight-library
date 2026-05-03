@@ -14,6 +14,7 @@ import { readProgressVar } from "@/lib/useScrollProgress";
  * next rather than being re-spawned.
  */
 function rasterize(text: string, W = 512, H = 96, step = 6) {
+  if (typeof document === "undefined") return [];
   const c = document.createElement("canvas");
   c.width = W;
   c.height = H;

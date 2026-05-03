@@ -15,13 +15,15 @@ function CyberCity() {
   const tmpColor = useMemo(() => new THREE.Color(), []);
 
   const bData = useMemo(() => {
-    const items: { x: number; z: number; h: number; hue: number }[] = [];
+    const items: { x: number; z: number; h: number; hue: number; widthX: number; widthZ: number }[] = [];
     for (let i = 0; i < BUILDING_COUNT; i++) {
       items.push({
         x: (Math.random() - 0.5) * 40,
         z: (Math.random() - 0.5) * 60,
         h: 0.5 + Math.pow(Math.random(), 2) * 6,
         hue: 0.8 + Math.random() * 0.2,
+        widthX: 0.8 + Math.random() * 0.01,
+        widthZ: 0.8 + Math.random() * 0.01,
       });
     }
     return items;
@@ -44,7 +46,7 @@ function CyberCity() {
     for (let i = 0; i < BUILDING_COUNT; i++) {
       const b = bData[i];
       dummy.position.set(b.x, b.h / 2, b.z - p * 30);
-      dummy.scale.set(0.8 + Math.random() * 0.01, b.h, 0.8 + Math.random() * 0.01);
+      dummy.scale.set(b.widthX, b.h, b.widthZ);
       dummy.updateMatrix();
       buildings.current?.setMatrixAt(i, dummy.matrix);
 
