@@ -65,12 +65,10 @@ function Ribbon({
   );
 }
 
-export default function RibbonScene() {
+const RIBBON_COLORS = ["#7c5cff", "#5cffd1", "#ff7c5c", "#c9b8ff", "#ffffff"];
+
+function RibbonGroup() {
   const group = useRef<THREE.Group>(null);
-  const colors = useMemo(
-    () => ["#7c5cff", "#5cffd1", "#ff7c5c", "#c9b8ff", "#ffffff"],
-    []
-  );
 
   useFrame(({ camera }, delta) => {
     const p = readProgressVar();
@@ -81,16 +79,22 @@ export default function RibbonScene() {
   });
 
   return (
+    <group ref={group}>
+      {RIBBON_COLORS.map((c, i) => (
+        <Ribbon key={i} seed={i} color={c} />
+      ))}
+    </group>
+  );
+}
+
+export default function RibbonScene() {
+  return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 6], fov: 45 }}>
       <color attach="background" args={["#05050c"]} />
       <ambientLight intensity={0.35} />
       <directionalLight position={[4, 4, 5]} intensity={1.2} />
       <Environment preset="night" />
-      <group ref={group}>
-        {colors.map((c, i) => (
-          <Ribbon key={i} seed={i} color={c} />
-        ))}
-      </group>
+      <RibbonGroup />
     </Canvas>
   );
 }
