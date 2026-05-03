@@ -58,13 +58,13 @@ export default function FooterCTASection({
       <div className="text-center overflow-hidden">
         <h2
           data-line
-          className="text-7xl md:text-[10rem] font-semibold leading-[0.9] tracking-tight"
+          className="text-4xl sm:text-7xl md:text-[10rem] font-semibold leading-[0.9] tracking-tight"
         >
           {line1}
         </h2>
         <h2
           data-line
-          className="text-7xl md:text-[10rem] font-semibold leading-[0.9] tracking-tight text-accent"
+          className="text-4xl sm:text-7xl md:text-[10rem] font-semibold leading-[0.9] tracking-tight text-accent"
         >
           {line2}
         </h2>

@@ -54,7 +54,7 @@ export default function MagneticCTASection({
         </p>
         <button
           ref={btnRef}
-          className="rounded-full bg-accent px-12 py-6 text-2xl font-medium will-change-transform"
+          className="rounded-full bg-accent px-8 py-4 sm:px-12 sm:py-6 text-lg sm:text-2xl font-medium will-change-transform"
         >
           {label}
         </button>

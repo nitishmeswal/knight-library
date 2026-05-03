@@ -38,7 +38,7 @@ export default function StickyCardsSection({
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="relative py-40 px-6 md:px-12"
+      className="relative py-20 sm:py-40 px-4 sm:px-6 md:px-12"
     >
       <div className="max-w-3xl mx-auto space-y-6">
         <p className="eyebrow mb-3">Process</p>
@@ -48,12 +48,12 @@ export default function StickyCardsSection({
             <div
               key={i}
               data-sticky-card
-              className="sticky top-24 rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur will-change-transform"
+              className="sticky top-24 rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-10 backdrop-blur will-change-transform"
               style={{ zIndex: i + 1 }}
             >
               <p className="eyebrow mb-3">{String(i + 1).padStart(2, "0")}</p>
-              <h3 className="text-4xl font-semibold mb-3">{c.title}</h3>
-              <p className="text-ink/70 text-lg">{c.body}</p>
+              <h3 className="text-2xl sm:text-4xl font-semibold mb-3">{c.title}</h3>
+              <p className="text-ink/70 text-base sm:text-lg">{c.body}</p>
             </div>
           ))}
         </div>

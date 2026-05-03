@@ -56,7 +56,7 @@ export default function MarqueeSection({
     >
       <div
         data-marquee
-        className="flex whitespace-nowrap text-7xl md:text-9xl font-semibold tracking-tight"
+        className="flex whitespace-nowrap text-4xl sm:text-7xl md:text-9xl font-semibold tracking-tight"
         style={{ width: "max-content" }}
       >
         <span className="pr-12">{text}</span>

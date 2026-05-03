@@ -4,7 +4,7 @@ import FlipCard3D from "@/components/lab/c23d/FlipCard3D";
 
 function SampleCard() {
   return (
-    <div className="w-[360px] rounded-3xl bg-gradient-to-br from-accent/40 to-white/5 border border-white/15 p-8 text-ink">
+    <div className="w-full max-w-[360px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-accent/40 to-white/5 border border-white/15 p-6 sm:p-8 text-ink">
       <p className="eyebrow">Real component</p>
       <h3 className="text-3xl font-semibold mt-2 mb-2">Fully interactive.</h3>
       <p className="text-ink/70 mb-6">
@@ -19,7 +19,7 @@ function SampleCard() {
 
 function BackFace() {
   return (
-    <div className="w-full h-full rounded-3xl bg-accent p-8 flex flex-col text-white">
+    <div className="w-full h-full rounded-2xl sm:rounded-3xl bg-accent p-6 sm:p-8 flex flex-col text-white">
       <p className="eyebrow text-white/80">Back face</p>
       <h3 className="text-3xl font-semibold mt-2 mb-2">Hidden specs.</h3>
       <ul className="text-white/90 space-y-1">
@@ -33,7 +33,7 @@ function BackFace() {
 
 export default function Component23DPage() {
   return (
-    <main className="min-h-screen px-6 md:px-12 py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-20 max-w-5xl mx-auto">
       <Link href="/lab" className="text-sm text-ink/60 hover:text-ink">
         ← Lab
       </Link>
@@ -54,7 +54,7 @@ export default function Component23DPage() {
           Wrap anything. It lifts into 3D with a gentle float. Try clicking
           the button below — it still fires.
         </p>
-        <div className="rounded-3xl border border-white/10 bg-white/5">
+        <div className="rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5">
           <Lift3D height={520}>
             <SampleCard />
           </Lift3D>
@@ -67,7 +67,7 @@ export default function Component23DPage() {
           Two React faces on a true 3D flip. Hover the card.
         </p>
         <div className="flex justify-center" style={{ perspective: 1200 }}>
-          <div className="w-[360px] h-[240px]">
+          <div className="w-full max-w-[360px] h-[240px]">
             <FlipCard3D
               trigger="hover"
               front={

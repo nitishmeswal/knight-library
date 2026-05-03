@@ -37,7 +37,7 @@ export default function ImageParallaxSection() {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="relative py-40 px-6 md:px-12"
+      className="relative py-20 sm:py-40 px-4 sm:px-6 md:px-12"
     >
       <div className="mb-16 max-w-4xl">
         <p className="eyebrow mb-3" data-anim="fade-up">

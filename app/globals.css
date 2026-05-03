@@ -11,6 +11,7 @@ body {
   background: #0a0a0f;
   color: #e8e8ee;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 html {
@@ -19,11 +20,11 @@ html {
 
 /* Section helpers */
 .section {
-  @apply relative w-full min-h-screen flex items-center justify-center px-6 md:px-12;
+  @apply relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12;
 }
 
 .headline {
-  @apply text-5xl md:text-7xl font-semibold tracking-tight;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight;
 }
 
 .eyebrow {
@@ -36,6 +37,11 @@ html {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  touch-action: manipulation;
+}
+
+.three-stage canvas {
+  touch-action: manipulation;
 }
 
 .content-layer {

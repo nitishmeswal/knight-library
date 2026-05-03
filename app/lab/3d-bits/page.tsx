@@ -5,11 +5,11 @@ import MagneticButton3D from "@/components/lab/bits3d/MagneticButton3D";
 
 export default function Bits3DPage() {
   return (
-    <main className="min-h-screen px-6 md:px-12 py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-20 max-w-5xl mx-auto">
       <Link href="/lab" className="text-sm text-ink/60 hover:text-ink">
         ← Lab
       </Link>
-      <h1 className="headline mt-6 mb-12">3D Bits.</h1>
+      <h1 className="headline mt-6 mb-8 sm:mb-12">3D Bits.</h1>
 
       {/* Tilt card */}
       <section className="mb-20">
@@ -18,7 +18,7 @@ export default function Bits3DPage() {
           CSS 3D tilt with depth layers. Hover the card.
         </p>
         <div className="flex justify-center py-10" style={{ perspective: 1200 }}>
-          <TiltCard3D className="w-[360px] h-[220px] rounded-3xl bg-gradient-to-br from-accent/40 to-white/5 border border-white/15 p-8 relative overflow-hidden">
+          <TiltCard3D className="w-full max-w-[360px] h-[220px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-accent/40 to-white/5 border border-white/15 p-6 sm:p-8 relative overflow-hidden">
             <p data-depth="0.1" className="eyebrow">
               Premium card
             </p>

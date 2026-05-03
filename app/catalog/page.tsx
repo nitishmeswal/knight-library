@@ -15,25 +15,25 @@ export default function CatalogPage() {
   );
 
   return (
-    <main className="min-h-screen px-6 md:px-12 py-24 max-w-6xl mx-auto">
-      <header className="mb-16">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-24 max-w-6xl mx-auto">
+      <header className="mb-10 sm:mb-16">
         <p className="eyebrow mb-3">Library</p>
         <h1 className="headline mb-4">Template Catalog</h1>
-        <p className="text-ink/70 text-lg max-w-2xl">
+        <p className="text-ink/70 text-base sm:text-lg max-w-2xl">
           {TEMPLATE_CATALOG.length} ready-to-use scroll & 3D sections. Each one
           is a single self-contained file in{" "}
           <code className="text-accent">components/templates</code>.
         </p>
-        <div className="mt-6 flex gap-3 text-sm">
+        <div className="mt-6 flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm">
           <a
             href="/"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             ← Home
           </a>
           <a
             href="/templates"
-            className="rounded-full bg-accent px-4 py-2 font-medium"
+            className="rounded-full bg-accent px-3 py-1.5 sm:px-4 sm:py-2 font-medium"
           >
             View live gallery →
           </a>
@@ -45,7 +45,7 @@ export default function CatalogPage() {
           <h2 className="text-sm uppercase tracking-[0.2em] text-accent mb-5">
             {kind}
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {items.map((t) => (
               <div
                 key={t.id}

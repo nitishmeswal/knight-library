@@ -75,7 +75,7 @@ export default function ScrambleHeadingSection({
         <p className="eyebrow mb-6">{eyebrow}</p>
         <h2
           data-scramble
-          className="text-5xl md:text-7xl font-semibold tracking-tight font-mono"
+          className="text-2xl sm:text-4xl md:text-7xl font-semibold tracking-tight font-mono"
         >
           {phrase}
         </h2>
