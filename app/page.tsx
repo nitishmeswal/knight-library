@@ -17,28 +17,28 @@ export default function Page() {
       {/* All GSAP ScrollTrigger setup is centralized here */}
       <ScrollAnimations />
 
-      <nav className="fixed top-6 right-6 z-50 flex gap-2 text-sm">
+      <nav className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 flex flex-wrap justify-end gap-2 text-xs sm:text-sm max-w-[calc(100vw-2rem)]">
         <a
           href="/catalog"
-          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-4 py-2 hover:bg-white/5"
+          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
         >
           Catalog
         </a>
         <a
           href="/templates"
-          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-4 py-2 hover:bg-white/5"
+          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
         >
           Sections
         </a>
         <a
           href="/scenes"
-          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-4 py-2 hover:bg-white/5"
+          className="rounded-full border border-white/15 bg-black/50 backdrop-blur px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
         >
           3D Scenes
         </a>
         <a
           href="/lab"
-          className="rounded-full bg-accent px-4 py-2 font-medium"
+          className="rounded-full bg-accent px-3 py-1.5 sm:px-4 sm:py-2 font-medium"
         >
           Lab (beta) →
         </a>

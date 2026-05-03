@@ -52,7 +52,7 @@ export default function CountUpSection({
         <div className="grid md:grid-cols-3 gap-10">
           {stats.map((s) => (
             <div key={s.label} className="border-t border-white/15 pt-6">
-              <div className="text-6xl md:text-7xl font-semibold tracking-tight">
+              <div className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight">
                 <span data-count={s.value}>0</span>
                 <span className="text-accent">{s.suffix}</span>
               </div>

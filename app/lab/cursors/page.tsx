@@ -16,7 +16,7 @@ export default function CursorsPage() {
   const [active, setActive] = useState<string | null>("blob");
 
   return (
-    <main className="min-h-screen px-6 md:px-12 py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-20 max-w-5xl mx-auto">
       <Link href="/lab" className="text-sm text-ink/60 hover:text-ink">
         ← Lab
       </Link>
@@ -42,7 +42,7 @@ export default function CursorsPage() {
         ))}
       </div>
 
-      <section className="rounded-3xl border border-white/10 bg-white/5 p-10 min-h-[400px] flex flex-col gap-8">
+      <section className="rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-10 min-h-[300px] sm:min-h-[400px] flex flex-col gap-6 sm:gap-8">
         <p className="text-ink/60 text-sm">
           {options.find((o) => o.id === active)?.desc ?? "Pick a cursor above."}
         </p>

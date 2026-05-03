@@ -33,8 +33,8 @@ const categories = [
 
 export default function LabIndexPage() {
   return (
-    <main className="min-h-screen px-6 md:px-12 py-24 max-w-6xl mx-auto">
-      <header className="mb-16">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-24 max-w-6xl mx-auto">
+      <header className="mb-10 sm:mb-16">
         <div className="inline-flex items-center gap-2 mb-4">
           <span className="text-xs tracking-[0.3em] uppercase text-accent">
             Beta
@@ -47,58 +47,58 @@ export default function LabIndexPage() {
         <h1 className="headline mb-4">
           Backgrounds, cursors, 3D bits & more.
         </h1>
-        <p className="text-ink/70 text-lg max-w-2xl">
+        <p className="text-ink/70 text-base sm:text-lg max-w-2xl">
           A beta playground for tiny enhancements that make a site feel
           premium. Mix and match — each component is a single file with
           zero setup.
         </p>
-        <div className="mt-6 flex gap-3 text-sm">
+        <div className="mt-6 flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm">
           <Link
             href="/"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             ← Home
           </Link>
           <Link
             href="/scenes"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             3D Scenes
           </Link>
           <Link
             href="/templates"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             Section templates
           </Link>
         </div>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {categories.map((c, i) => (
           <Link
             key={c.slug}
             href={`/lab/${c.slug}`}
-            className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 overflow-hidden hover:border-accent/40 transition"
+            className="group relative rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-8 overflow-hidden hover:border-accent/40 transition"
           >
             <div
-              className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl opacity-40 group-hover:opacity-80 transition"
+              className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 w-48 sm:w-64 h-48 sm:h-64 rounded-full blur-3xl opacity-40 group-hover:opacity-80 transition"
               style={{ background: c.accent }}
             />
             <div className="relative">
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-xs tracking-[0.25em] uppercase text-ink/50">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-ink/50">
                   Category {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="text-xs rounded-full border border-white/15 px-3 py-1 text-ink/70">
+                <span className="text-[10px] sm:text-xs rounded-full border border-white/15 px-2 py-0.5 sm:px-3 sm:py-1 text-ink/70">
                   {c.count} components
                 </span>
               </div>
-              <h3 className="text-3xl font-semibold tracking-tight mb-2">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-2">
                 {c.name}
               </h3>
-              <p className="text-ink/70">{c.desc}</p>
-              <p className="mt-6 text-accent text-sm group-hover:translate-x-1 transition">
+              <p className="text-ink/70 text-sm sm:text-base">{c.desc}</p>
+              <p className="mt-4 sm:mt-6 text-accent text-sm group-hover:translate-x-1 transition">
                 Open →
               </p>
             </div>

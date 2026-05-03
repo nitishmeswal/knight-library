@@ -56,7 +56,7 @@ export default function SceneSection({
       ref={ref}
       className={`section flex-col ${alignCls}`}
     >
-      <div className="max-w-3xl flex flex-col gap-6" style={{ alignItems: align === "center" ? "center" : "flex-start" }}>
+      <div className="max-w-3xl w-full flex flex-col gap-4 sm:gap-6 px-2 sm:px-0" style={{ alignItems: align === "center" ? "center" : "flex-start" }}>
         <p data-s className="eyebrow">
           {chapter}
         </p>
@@ -64,7 +64,7 @@ export default function SceneSection({
           {title}
         </h2>
         {body && (
-          <p data-s className="text-lg md:text-xl text-ink/70 max-w-2xl">
+          <p data-s className="text-base sm:text-lg md:text-xl text-ink/70 max-w-2xl">
             {body}
           </p>
         )}

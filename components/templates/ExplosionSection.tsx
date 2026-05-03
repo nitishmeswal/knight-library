@@ -71,7 +71,7 @@ export default function ExplosionSection({
         <p className="eyebrow mb-8">Explosion → Reform</p>
         <h2
           data-explode
-          className="text-5xl md:text-8xl font-semibold tracking-tight leading-[1.05]"
+          className="text-3xl sm:text-5xl md:text-8xl font-semibold tracking-tight leading-[1.05]"
         >
           {phrase}
         </h2>

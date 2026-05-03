@@ -100,7 +100,7 @@ export default function HookSection({
         </p>
         <h2
           data-hook
-          className="text-6xl md:text-8xl font-semibold tracking-tight leading-[1.05]"
+          className="text-3xl sm:text-5xl md:text-8xl font-semibold tracking-tight leading-[1.05]"
           style={{ perspective: 800 }}
         >
           {hook}

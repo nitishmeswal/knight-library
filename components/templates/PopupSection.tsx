@@ -70,7 +70,7 @@ export default function PopupSection({
       />
       <div
         data-popup-card
-        className="relative z-10 max-w-md w-full rounded-3xl bg-white/10 border border-white/15 p-8 shadow-2xl backdrop-blur-xl"
+        className="relative z-10 max-w-md w-full rounded-2xl sm:rounded-3xl bg-white/10 border border-white/15 p-5 sm:p-8 shadow-2xl backdrop-blur-xl mx-4 sm:mx-0"
       >
         <p data-popup-item className="eyebrow mb-3">
           {eyebrow}

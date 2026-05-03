@@ -425,56 +425,56 @@ const scenes = [
 
 export default function ScenesIndexPage() {
   return (
-    <main className="min-h-screen px-6 md:px-12 py-24 max-w-6xl mx-auto">
-      <header className="mb-16">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-24 max-w-6xl mx-auto">
+      <header className="mb-10 sm:mb-16">
         <p className="eyebrow mb-3">Sixty premium scenes</p>
         <h1 className="headline mb-4">Scroll-driven Three.js.</h1>
-        <p className="text-ink/70 text-lg max-w-2xl">
+        <p className="text-ink/70 text-base sm:text-lg max-w-2xl">
           Each scene is a full-page experience: a persistent Three.js canvas
           behind stacked chapters, every 3D transformation wired to scroll
           progress. Pick one and make it yours.
         </p>
-        <div className="mt-6 flex gap-3 text-sm">
+        <div className="mt-6 flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm">
           <Link
             href="/"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             ← Home
           </Link>
           <Link
             href="/templates"
-            className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/5"
+            className="rounded-full border border-white/15 px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-white/5"
           >
             Section templates →
           </Link>
         </div>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {scenes.map((s, i) => (
           <Link
             key={s.slug}
             href={`/scenes/${s.slug}`}
-            className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 overflow-hidden hover:border-accent/40 transition"
+            className="group relative rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-8 overflow-hidden hover:border-accent/40 transition"
           >
             <div
-              className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl opacity-40 group-hover:opacity-70 transition"
+              className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 w-48 sm:w-64 h-48 sm:h-64 rounded-full blur-3xl opacity-40 group-hover:opacity-70 transition"
               style={{ background: s.accent }}
             />
             <div className="relative">
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-xs tracking-[0.25em] uppercase text-ink/50">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-ink/50">
                   Scene {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="text-xs rounded-full border border-white/15 px-3 py-1 text-ink/70">
+                <span className="text-[10px] sm:text-xs rounded-full border border-white/15 px-2 py-0.5 sm:px-3 sm:py-1 text-ink/70">
                   {s.kind}
                 </span>
               </div>
-              <h3 className="text-3xl font-semibold tracking-tight mb-2">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-2">
                 {s.name}
               </h3>
-              <p className="text-ink/70">{s.desc}</p>
-              <p className="mt-6 text-accent text-sm group-hover:translate-x-1 transition">
+              <p className="text-ink/70 text-sm sm:text-base">{s.desc}</p>
+              <p className="mt-4 sm:mt-6 text-accent text-sm group-hover:translate-x-1 transition">
                 Enter scene →
               </p>
             </div>

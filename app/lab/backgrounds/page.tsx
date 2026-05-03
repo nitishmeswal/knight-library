@@ -19,7 +19,7 @@ function Demo({
         <h3 className="text-2xl font-semibold">{name}</h3>
         <p className="text-ink/60 text-sm">{desc}</p>
       </div>
-      <div className="relative h-[360px] rounded-3xl border border-white/10 overflow-hidden">
+      <div className="relative h-[280px] sm:h-[360px] rounded-2xl sm:rounded-3xl border border-white/10 overflow-hidden">
         {children}
       </div>
     </section>
@@ -28,11 +28,11 @@ function Demo({
 
 export default function BackgroundsPage() {
   return (
-    <main className="min-h-screen px-6 md:px-12 py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-4 sm:px-6 md:px-12 py-16 sm:py-20 max-w-5xl mx-auto">
       <Link href="/lab" className="text-sm text-ink/60 hover:text-ink">
         ← Lab
       </Link>
-      <h1 className="headline mt-6 mb-12">Backgrounds.</h1>
+      <h1 className="headline mt-6 mb-8 sm:mb-12">Backgrounds.</h1>
 
       <Demo
         name="AuroraBg"
